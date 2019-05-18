@@ -6,4 +6,4 @@ Subject Code: CSL47
 <code> javac filename.java </p>
 
 ### Run Code
-<p> java filename </p>
+<code> java filename </code>
