@@ -5,22 +5,31 @@ public class QuickSort
     static int max= 5000;
   public static int partition(int arr[],int low,int high)
   {
-      int pivot = arr[high];
-      int i = (low-1);
-      for(int j=low;j<=high;j++)
+      int pivot = arr[low];
+      int i = low;
+      int j= high+1;
+      while(i<=j)
       {
-        if(arr[j]<=pivot)
+        do
         {
-          i++;
+           i++;
+        }while(pivot>=arr[i] && i<=high);
+
+        do
+        {
+          j--;
+        } while(pivot<arr[j]);
+        if(i<j)
+        {
           int temp = arr[i];
           arr[i] = arr[j];
           arr[j] = temp;
         }
       }
-      int temp = arr[i+1];
-      arr[i+1] = arr[high];
-      arr[high] = temp;
-      return i+1;
+      int temp = arr[low];
+      arr[low] = arr[j];
+      arr[j] = temp;
+      return j;
   }
 public static void qs(int arr[],int low,int high)
 {
