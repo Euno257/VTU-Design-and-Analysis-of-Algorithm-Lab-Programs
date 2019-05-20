@@ -11,7 +11,7 @@ Subject Code: CSL47
 
 __Run .java file in every folder__
 
-### Programs
+## PROGRAMS
 
 1 A - Create a Java class called Student with the following details as variables within it. (i)	USN (ii)	Name (iii)	Branch (iv) Phone Write a Java program to create n Student objects and print the USN, Name, Branch, and Phone of these objects with suitable headings.
 
