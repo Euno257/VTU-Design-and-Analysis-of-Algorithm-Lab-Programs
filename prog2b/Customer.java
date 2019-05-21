@@ -17,7 +17,7 @@ public class Customer
   void display(String data)
   {
     String st = data.substring(0,data.length());
-    StringTokenizer token = new StringTokenizer(str,"<,/,>");
+    StringTokenizer token = new StringTokenizer(st,"<,/,>");
     String finalString = null;
     while(token.hasMoreTokens())
     {
