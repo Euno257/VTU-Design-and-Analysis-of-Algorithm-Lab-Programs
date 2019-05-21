@@ -37,7 +37,7 @@ class Runnable2 implements Runnable
     Scanner in = new Scanner(System.in);
     System.out.println("Enter number to find the cube ");
     int c = in.nextInt();
-    System.out.println("Enter number to find the square ");
+
     int d = c*c*c;
     System.out.println("The cube of the number is "+d);
   }
