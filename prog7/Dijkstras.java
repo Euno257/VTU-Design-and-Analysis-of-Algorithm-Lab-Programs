@@ -23,25 +23,26 @@ public class Dijkstras
   }
   public static void Dijkstra(int s)
   {
-    int V[] = new int[MAX]; //Array to check whether vertex is visited or not
+    int visited[] = new int[MAX]; //Array to check whether vertex is visited or not
     int d[] = new int[MAX]; //distance from source to each vertex
-    int u,v;
-    for(int i=1;i<=n;i++)
+    int i,u,v;
+    for(i=1;i<=n;i++)
     {
-      V[i]=0; //initially every vertex is not visited
+      visited[i]=0; //initially every vertex is not visited
       d[i] = a[s][i]; //weights from source
     }
-    V[s]=1;
+    visited[s]=1;
     d[s]=0;
-    int i=2;
-    while(i<=n)
+
+    i=1;
+    while(i<=n-1)
     {
-      u = Extract_Min(V,d); //vertex with min distance from source
-      V[u]=1;
+      u = Extract_Min(visited,d); //vertex with min distance from source
+      visited[u]=1;
       i++;
       for(v=1;v<=n;v++)
       {
-        if((d[u]+a[u][v]<d[v]) && V[v]==0)
+        if((d[u]+a[u][v]<d[v]) && visited[v]==0)
           d[v]= d[u]+a[u][v];
       }
     }
@@ -49,13 +50,13 @@ public class Dijkstras
         if(i!=s)
           System.out.println(i+":"+d[i]);
   }
-  public static int Extract_Min(int V[],int d[])
+  public static int Extract_Min(int visited[],int d[])
   {
     int i,j,min;
     j=1;
     min = infinity;
     for(i=1;i<n;i++)
-      if(d[i]<min && V[i]==0)
+      if(d[i]<min && visited[i]==0)
       {
         min = d[i];
         j=i;
