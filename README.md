@@ -12,8 +12,8 @@ javac filename.java
 java filename
 ```
 
-## PROGRAMS
----
+## Programs
+
 ### 1A
 Create a Java class called Student with the following details as variables within it. (i)	USN (ii)	Name (iii)	Branch (iv) Phone Write a Java program to create n Student objects and print the USN, Name, Branch, and Phone of these objects with suitable headings.
 https://github.com/Euno257/VTU-Design-and-Analysis-of-Algorithm-Lab/blob/master/prog1a/Student.java
