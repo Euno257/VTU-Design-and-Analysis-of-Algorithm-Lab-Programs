@@ -3,7 +3,7 @@ Subject Code: CSL47
 - I chose ***Atom*** for the editor but i highly recommend you to use ***IntelliJ*** or ***Eclipse***.
 - Include ***package*** while using any IDE other than Atom.
 
-### Compile Code
+### Build Code
 ```java
 javac filename.java
 ```
